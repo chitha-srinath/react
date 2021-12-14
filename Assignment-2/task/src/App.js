@@ -2,23 +2,26 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const employee = {
+    name: 'Tom',
+    location: 'New York',
+    bloodGroup: 'B+',
+    age: 28,
+    profileImg: 'https://www.w3schools.com/howto/img_avatar.png'
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <div className="content">
+    <img src={employee.profileImg} img />
+    <h1> {employee.name}</h1>
+    <p>Location</p>
+    <h3>{employee.location}</h3>
+    <p>Blood Group</p>
+    <h3>{employee.bloodGroup}</h3>
+    <p>Age</p>
+    <h3>{employee.age}</h3>
+  </div>
+  </>
   );
 }
 
