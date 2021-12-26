@@ -1,10 +1,60 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './Postview.css';
+import { Navbar, Container, Card, Button, Row, Col } from "react-bootstrap";
 
+const Postview = () => {
+  const [Posts, setPost] = useState([])
+  useEffect(() => {
+    fetch("http://localhost:3004/user")
+      .then((res) => res.json())
+      .then((res) => setPost(res))
+  }, [])
 
-const Postview=()=> {
   return (
     <div className="site-container">
+      <div className="header">
+        <Navbar bg="dark" variant="dark">
+          <Container>
+            <Navbar.Brand href="#home"><b>InstaClone</b></Navbar.Brand>
+            <Navbar.Toggle />
+            <Navbar.Collapse className="justify-content-end">
+              <Navbar.Text>
+                Camera
+              </Navbar.Text>
+            </Navbar.Collapse>
+          </Container>
+        </Navbar>
+      </div>
+      <div className="container">
+        {
+          Posts.map((post, index) => {
+            return (
+              <Container key= {index} className='my-5'>
+                <Row>
+                  <Col md={{ span: 6, offset: 3 }}>
+                    <Card >
+                      <Card.Header style={{ textAlign: "left" }}><label >{post.name}</label>
+                        <br />
+                        <label >{post.location}</label></Card.Header>
+                      <Card.Body className="text-center">
+                        <Card.Title>
+                          <img src={post.image} alt="img" />
+                        </Card.Title>
+                        <Card.Text>
+                         {post.description}
+                        </Card.Text>
+                        <Button variant="primary">{post.likes} Likes</Button>
+                      </Card.Body>
+                      <Card.Footer className="text-muted"> {new Date(post.date).toLocaleDateString()}</Card.Footer>
+                    </Card>
+                  </Col>
+                </Row>
+              </Container>
+            )
+          })
+        }
+
+      </div>
     </div>
   );
 }
