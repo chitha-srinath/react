@@ -1,0 +1,18 @@
+.row {
+  padding-top: 20vh;
+  align-content: center;
+}
+
+.col-md-6.offset-md-3 {
+  display: flex;
+  height: 40vh;
+  justify-content: space-around;
+  align-items: center;
+}
+button{
+    height:40px;
+    width:100px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:blanchedalmond;
+}
