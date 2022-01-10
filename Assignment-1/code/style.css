@@ -1,1 +1,64 @@
+.first,
+.third {
+  display: flex;
+}
+@media only screen and (max-width: 320px) {
+  .first,
+  .third {
+    flex-direction: column;
+  }
+  .one,
+  .two,
+  .a,
+  .b,
+  .c {
+    width: auto !important;
+    height:10vh !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .third {
+    flex-direction: column;
+  }
+  .a,
+  .b,
+  .c {
+    width: auto !important;
+    height:15vh !important;
+  }
+}
+.one {
+  background-color: aqua;
+  margin: 10px;
+  width: 50vw;
+  height: 30vh;
+}
+.two {
+  background-color: burlywood;
+  margin: 10px;
+  width: 50vw;
+  height: 30vh;
+}
+.second {
+  background-color: darkseagreen;
+  margin: 10px;
+  width: auto;
+  height: 30vh;
+}
+.a,
+.b,
+.c {
+  margin: 10px;
+  width: 33vw;
+  height: 30vh;
+}
+.a {
+  background-color: black;
+}
+.b {
+  background-color: dodgerblue;
+}
+.c {
+  background-color: gold;
+}
 
