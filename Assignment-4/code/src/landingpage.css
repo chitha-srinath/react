@@ -1,18 +1,25 @@
-.row {
+.initial {
   padding-top: 20vh;
   align-content: center;
 }
 
-.col-md-6.offset-md-3 {
+.main {
   display: flex;
   height: 40vh;
   justify-content: space-around;
   align-items: center;
 }
-button{
-    height:40px;
-    width:100px;
-    border-radius: 10px;
-    cursor: pointer;
-    background-color:blanchedalmond;
+.click {
+  margin-left: 2vw;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+a {
+  text-decoration: none;
+}
+img {
+  padding-top: 15vh;
 }

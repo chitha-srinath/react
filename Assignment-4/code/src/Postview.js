@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import './Postview.css';
 import { Navbar, Container, Card, Button, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
+// import Post from "./Post"
 
 const Postview = () => {
-  const [Posts, setPost] = useState([])
+  const [Posts, setPosts] = useState([])
   useEffect(() => {
-    fetch("http://localhost:3004/user")
+    fetch("/api/getposts")
       .then((res) => res.json())
-      .then((res) => setPost(res))
+      .then((res) => setPosts(res.posts))
+      
   }, [])
 
   return (
@@ -19,7 +22,7 @@ const Postview = () => {
             <Navbar.Toggle />
             <Navbar.Collapse className="justify-content-end">
               <Navbar.Text>
-                Camera
+              <Link to="/Post">Camera</Link>
               </Navbar.Text>
             </Navbar.Collapse>
           </Container>
@@ -43,9 +46,9 @@ const Postview = () => {
                         <Card.Text>
                          {post.description}
                         </Card.Text>
-                        <Button variant="primary">{post.likes} Likes</Button>
+                        <Button variant="primary">50 Likes</Button>
                       </Card.Body>
-                      <Card.Footer className="text-muted"> {new Date(post.date).toLocaleDateString()}</Card.Footer>
+                      <Card.Footer className="text-muted">21 0ct 2022</Card.Footer>
                     </Card>
                   </Col>
                 </Row>

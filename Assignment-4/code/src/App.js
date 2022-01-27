@@ -1,6 +1,8 @@
 import React from 'react'
 import  LandingPage  from "./LandingPage";
 import  Postview  from "./Postview";
+import  Post  from "./Post"; 
+
 import {
     BrowserRouter,
     Routes,
@@ -14,6 +16,7 @@ export default function App() {
                 <Routes>
                     <Route exact path="/" element={<LandingPage />} />
                     <Route path="/Postview" element={<Postview />} />
+                    <Route path="/Post" element={<Post />} />
                 </Routes>
             </BrowserRouter>
         </>

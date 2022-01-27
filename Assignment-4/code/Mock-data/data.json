@@ -6,21 +6,21 @@
             "location":"Bengaluru",
             "likes":64,
             "description": "Kick start your career",
-            "PostImage": "https://picsum.photos/500/500",
+            "PostImage": "../src/images/pic1.jpg",
             "date": 101221
             },
             {"name":"Neeraj",
             "location":"Pune",
             "likes":30,
             "description": "Sample Description",
-            "PostImage": "https://picsum.photos/500/500",
+            "PostImage": "../src/images/pic 2.jpg",
             "date": 150625
             },
             {"name":"Rahul",
             "location":"Hyderabad",
             "likes":30,
             "description": "Sample Description for Post",
-            "PostImage": "https://picsum.photos/500/500",
+            "PostImage": "../src/images/pic 3.jpg",
             "date": 230823
             }
             ]
