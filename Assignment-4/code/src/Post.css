@@ -1,0 +1,21 @@
+.centre{
+    height: 37vh;
+    width:40vw;
+    border: 1px solid black;
+    margin: 20vh auto;
+    position: relative;
+}
+form{
+position: absolute;
+left:20px;
+top:30px;
+}
+input{
+    margin: 10px 20px;
+}
+button{
+    margin: 10px 20px;
+    width:70px;
+    height:30px;
+    border-radius: 5px;
+}

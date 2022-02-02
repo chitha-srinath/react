@@ -1,0 +1,25 @@
+.initial {
+  padding-top: 20vh;
+  align-content: center;
+}
+
+.main {
+  display: flex;
+  height: 40vh;
+  justify-content: space-around;
+  align-items: center;
+}
+.click {
+  margin-left: 2vw;
+  height: 40px;
+  width: 100px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: blanchedalmond;
+}
+a {
+  text-decoration: none;
+}
+img {
+  padding-top: 15vh;
+}
